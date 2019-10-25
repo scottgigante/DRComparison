@@ -8,6 +8,8 @@ params_settings <- function(method, num_clust=NULL){
 		params <- list(rotate = "oblimin", filtering_method="nonzeros", norm_method="log")
 	}else if(method=="PCA"){
 		params <- list(filtering_method="nonzeros", norm_method="log")
+	}else if(method=="PHATE"){
+		params <- list(filtering_method="nonzeros", norm_method="log")
 	}else if(method=="ZINBWaVE"){
 		params <- list(num_core=20, doParallel=TRUE, X=NULL, V=NULL, filtering_method="nonzeros")
 	}else if(method=="PoissonNMF"){
