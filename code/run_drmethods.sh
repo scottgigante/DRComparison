@@ -2,12 +2,16 @@
 
 #SBATCH --time=1-23:00:00
 #SBATCH --job-name=dr
-#SBATCH --mem=32000
-#SBATCH --partition=general
 #SBATCH --array=1-260%100
-#SBATCH --output=~/scRNAseqDRComparison/out/dr%a.out
-#SBATCH --error=~/scRNAseqDRComparison/err/dr%a.err
-#SBATCH --chdir=~/scRNAseqDRComparison
+#SBATCH --ntasks=1 --nodes=1
+#SBATCH --cpus-per-task=2
+#SBATCH --mem=16000
+#SBATCH --constraint=avx2
+#SBATCH --mail-user=scott.gigante@yale.edu
+#SBATCH --mail-type=ALL
+#SBATCH --output=/ysm-gpfs/home/sag86/slurm_logs/slurm_%x_%j.out
+
+cd ~/scRNAseqDRComparison
 
 module purge
 module load R/3.5.0-foss-2016b-avx2
