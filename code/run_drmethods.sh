@@ -7,7 +7,7 @@
 #SBATCH --array=1-260%100
 #SBATCH --output=~/scRNAseqDRComparison/out/dr%a.out
 #SBATCH --error=~/scRNAseqDRComparison/err/dr%a.err
-#SBATCH --workdir=~/scRNAseqDRComparison
+#SBATCH --chdir=~/scRNAseqDRComparison
 
 bash
 
