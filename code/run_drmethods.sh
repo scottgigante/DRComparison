@@ -2,7 +2,7 @@
 
 #SBATCH --time=1-23:00:00
 #SBATCH --job-name=dr
-#SBATCH --mem=5000
+#SBATCH --mem=32000
 #SBATCH --partition=general
 #SBATCH --array=1-260%100
 #SBATCH --output=~/scRNAseqDRComparison/out/dr%a.out
