@@ -1,0 +1,3 @@
+[submodule "scrna2019"]
+	path = scrna2019
+	url = https://github.com/willtownes/scrna2019

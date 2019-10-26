@@ -12,11 +12,11 @@ suppressPackageStartupMessages({
 # path.list = paste0(src.path, file.list)
 # sapply(path.list, source)
 ## code from GitHub: https://github.com/willtownes/scrna2019
-source("~/drmethods/scrna/algs/glmpca.R")
-source("~/drmethods/scrna/algs/ortho.R")
-source("~/drmethods/scrna/util/functions.R")
-source("~/drmethods/scrna/util/functions_genefilter.R")
-source("~/drmethods/scrna/util/txtparse.R")
+source("../scrna2019/algs/glmpca.R")
+source("../scrna2019/algs/ortho.R")
+source("../scrna2019/util/functions.R")
+source("../scrna2019/util/functions_genefilter.R")
+source("../scrna2019/util/txtparse.R")
 
 call_GLMPCA <- function(sce, num_pc, params){
 	# other parameter in pCMF method
