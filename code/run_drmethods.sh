@@ -5,9 +5,9 @@
 #SBATCH --mem=5000
 #SBATCH --partition=nomosix
 #SBATCH --array=1-260%100
-#SBATCH --output=~/scRNAseqDRComparison/code/out/dr%a.out
-#SBATCH --error=~/scRNAseqDRComparison/code/err/dr%a.err
-#SBATCH --workdir=~/scRNAseqDRComparison/code
+#SBATCH --output=~/scRNAseqDRComparison/out/dr%a.out
+#SBATCH --error=~/scRNAseqDRComparison/err/dr%a.err
+#SBATCH --workdir=~/scRNAseqDRComparison
 
 bash
 
@@ -29,7 +29,7 @@ for ((ip=1; ip<=4; ip++)); do
 for ((irpt=1; irpt<=5; irpt++)); do
   let k=${k}+1
   if [ ${k} -eq ${SLURM_ARRAY_TASK_ID} ]; then
-  Rscript --verbose ./run_drmethods.R ${id} ${im} ${ip} ${irpt}
+  Rscript --verbose ./code/run_drmethods.R ${id} ${im} ${ip} ${irpt}
   fi	
 done
 done
