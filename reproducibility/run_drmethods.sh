@@ -15,6 +15,7 @@ module purge
 module load R/3.5.0-foss-2016b-avx2
 module load miniconda/4.5.12
 module load zlib/1.2.8-GCCcore-5.4.0
+module load MPFR
 source activate python
 export LD_LIBRARY_PATH=/gpfs/ysm/project/sag86/conda_envs/python/lib:$LD_LIBRARY_PATH
 export PATH=/gpfs/ysm/project/sag86/conda_envs/python/bin:$PATH

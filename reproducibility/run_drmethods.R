@@ -16,7 +16,7 @@ c(8, 20, 38, 58), #Baron
 )
 num_pc <- PCList[[data_indx]][ipc]
 DATASET <- c("Baron")
-METHODS <- c("FA", "PCA", "PHATE", "ZINBWaVE", "pCMF", "DiffusionMap", "ICA", "NMF", "PoissonNMF", "MDS", "LLE", "Isomap", "LTSA", "GLMPCA")
+METHODS <- c("FA", "PCA", "PHATE", "ZINBWaVE", "DiffusionMap", "ICA", "NMF", "PoissonNMF", "MDS", "LLE", "Isomap", "LTSA")
 
 idata <- DATASET[data_indx]
 imethod <- METHODS[method_indx]
