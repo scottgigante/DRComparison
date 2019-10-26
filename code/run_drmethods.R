@@ -10,6 +10,7 @@ irpt <- args[4]
 
 ## library packages
 library(pryr) ## to count memory usage
+library(SingleCellExperiment)
 
 PCList <- list(
 c(8, 20, 38, 58) #Baron
