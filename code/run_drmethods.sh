@@ -9,8 +9,6 @@
 #SBATCH --error=~/scRNAseqDRComparison/err/dr%a.err
 #SBATCH --chdir=~/scRNAseqDRComparison
 
-bash
-
 module purge
 module load R/3.5.0-foss-2016b-avx2
 module load miniconda/4.5.12
