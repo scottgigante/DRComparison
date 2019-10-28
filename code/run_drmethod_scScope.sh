@@ -2,15 +2,16 @@
 
 #SBATCH --time=3-24:00:00
 #SBATCH --job-name=scscope
-#SBATCH --mem=10000
-#SBATCH --partition=nomosix
+#SBATCH --mem=16000
 #SBATCH --array=1-100%50
-#SBATCH --output=~/scRNAseqDRComparison/code/out/scscope%a.out
-#SBATCH --error=~/scRNAseqDRComparison/code/err/scscope%a.err
-#SBATCH --workdir=~/scRNAseqDRComparison/code
+#SBATCH --ntasks=1 --nodes=1
+#SBATCH --cpus-per-task=2
+#SBATCH --constraint=avx2
+#SBATCH --mail-user=scott.gigante@yale.edu
+#SBATCH --mail-type=ALL
+#SBATCH --output=/ysm-gpfs/home/sag86/slurm_logs/slurm_%x_%j.out
 
-bash
-
+cd ~/scRNAseqDRComparison/code
 
 module purge
 module load R/3.5.0-foss-2016b-avx2
