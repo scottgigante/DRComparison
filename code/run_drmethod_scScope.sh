@@ -27,7 +27,7 @@ for idata in 'Baron'; do
 for ip in 8 20 38 58; do
 for ((irpt=1; irpt<=5; irpt++)); do
   GFILE=../data/sce_${idata}_scScope.csv
-  CODEPATH=../algorithm
+  CODEPATH=../algorithms
   let k=${k}+1
   if [ ${k} -eq ${SLURM_ARRAY_TASK_ID} ]; then
   cd ${CODEPATH}

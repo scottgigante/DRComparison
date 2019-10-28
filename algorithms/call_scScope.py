@@ -1,6 +1,6 @@
 '''The goal of this demo is to show how to identify cell subpopulations based on latent
 representations of gene expression learned by scScope.'''
-import scscope_small as DeepImpute
+import scscope as DeepImpute
 import pandas as pd
 import phenograph
 import pickle

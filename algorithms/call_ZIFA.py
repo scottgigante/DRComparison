@@ -4,7 +4,7 @@ import random
 from copy import deepcopy
 
 #from .ZIFA import checkNoNans, Estep, Mstep, initializeParams
-from ZIFA import checkNoNans, Estep, Mstep, initializeParams
+from ZIFA.ZIFA import checkNoNans, Estep, Mstep, initializeParams
 """
 
 Block zero-inflated factor analysis (ZIFA). Performs dimensionality reduction on zero-inflated data.
